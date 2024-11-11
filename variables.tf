@@ -1,5 +1,5 @@
 variable "role_name" {
-  description = "Name of the role."
+  description = "Name of the role. If left unset, the role name will be `ih-tf-${var.repo_name}-github`."
   type        = string
   default     = null
 }
@@ -11,9 +11,4 @@ variable "gh_org_name" {
 
 variable "repo_name" {
   description = "Repository name in GitHub. Without the organization part."
-}
-
-variable "name_suffix" {
-  description = "Suffix to append to the name of the resources."
-  type        = string
 }
